@@ -96,56 +96,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		    <div class="container text-center">
 			    <h2 class="heading">Blog</h2>
 			    <div class="intro">Welcome to my blog. Subscribe and get my latest blog post in your inbox.</div>
-			    <form class="signup-form form-inline justify-content-center pt-3">
+			    <form class="signup-form form-inline justify-content-center pt-3" action="https://formspree.io/f/xpzkwqpa"
+  method="POST">
                     <div class="form-group">
                         <label class="sr-only" for="semail">Your email</label>
-                        <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter email">
+                        <input type="email"  name="_replyto" id="semail"  class="form-control mr-md-1 semail" placeholder="Enter email">
                     </div>
                     <button type="submit" class="btn btn-primary">Subscribe</button>
-				    <script>
-function hide (elements) {
-  elements = elements.length ? elements : [elements];
-  for (var index = 0; index < elements.length; index++) {
-    elements[index].style.display = 'none';
-  }
-}
-
-function subscribe() {
-    // replace vex-theme-plain with the name of your theme
-    vex.defaultOptions.className = 'vex-theme-plain';
-    var vexId = vex.dialog.open({
-    message: 'Get latest updates, enter your email:',
-    input: [
-        '<input name="email" type="text" placeholder="jhondoe@domain.com" required />',
-    ].join(''),
-    buttons: [
-        $.extend({}, vex.dialog.buttons.YES, { text: 'Subscribe' }),
-        $.extend({}, vex.dialog.buttons.NO, { text: 'Back' })
-    ],
-    callback: function (data) {
-        if (!data) {
-                }
-                else {
-            var email_value = data.email;
-                        var form = document.createElement("form");
-                        form.setAttribute('method',"post");
-                        //replace below email with your email
-                        form.setAttribute('action', "https://formspree.io/f/princetyagi193@gmail.com");
-
-                        var input = document.createElement("input"); //input element, text
-                        input.setAttribute('type',"email");
-                        input.setAttribute('name',"email");
-                        input.value = email_value;
-
-                        form.appendChild(input);
-                        form.submit();
-        }
-                // In most cases you wont need the below line, but after clicking submit or cancel if the box does not closes for some reason, you will want to uncommnet the line below.
-                // hide(document.querySelectorAll('.vex'));
-    },
-    });
-}
-</script>
+				    
                 </form>
 		    </div><!--//container-->
 	    </section>
