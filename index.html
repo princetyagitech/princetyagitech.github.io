@@ -103,7 +103,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <input type="email"  name="_replyto" id="semail"  class="form-control mr-md-1 semail" placeholder="Enter email">
                     </div>
                     <button type="submit" class="btn btn-primary">Subscribe</button>
-				    
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+
+var eventposted=0;
+
+$(document).ready(function(){
+ $('input.button').click(function() {
+   window.setInterval(foo, 100);
+ });
+});
+
+function foo(){
+ if(($(".form-submission-text").is(':visible')) && (eventposted==0)){
+   window.location = "<b>http://www.something.com/destinationpage</b>";
+   eventposted=1;
+ }
+}
+
+</script>
+	    
                 </form>
 		    </div><!--//container-->
 	    </section>
